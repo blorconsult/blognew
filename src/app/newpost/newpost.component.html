@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Enregistrer un nouveau post</h2>
+    <form [formGroup]="postForm" (ngSubmit)="onSaveBlog()">
+      <div class="form-group">
+        <label for="title">Titre du post</label>
+        <input type="text" id="postTitle"
+               class="form-control" formControlName="postTitle">
+      </div>
+      <div class="form-group">
+        <label for="postContent">Contenu</label>
+        <input type="text" id="postContent"
+               class="form-control" formControlName="postContent">
+      </div>
+    <button class="btn btn-success" [disabled]="bookForm.invalid || fileIsUploading"
+          type="submit">Sauver
+    </button>
+    </form>
+  </div>
+</div>

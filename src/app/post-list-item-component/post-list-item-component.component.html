@@ -1,0 +1,16 @@
+
+    <div  [ngStyle]="{'font-size': '20px',
+                      'font-weight': 'bold',
+                      'width': '900px',
+                      'height':'200px',
+                      'background-color':getBackgroundColor()}" >
+                      <h4 >post title : {{ postTitle  }}  
+      </h4>
+        <br>
+        {{ postContent  }}
+        <br>
+        <button class="btn btn-success" (click)="onIncrement()">Love It</button>
+        <button class="btn btn-success" (click)="onDecrement()">Dont' love It</button>
+        <button class="btn btn-default pull-right" (click)="onDeletePost(post)" >Supprimer</button>
+    </div> 
+    
